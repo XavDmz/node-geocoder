@@ -110,7 +110,8 @@
                         "streetName": "Pilkington Avenue",
                         "streetNumber": "135",
                         "countryCode": "GB",
-                        "neighbourhood": ""
+                        "neighbourhood": "",
+                        "confidence": 0.411
                     });
 
                     results.raw.should.deep.equal([{
@@ -144,7 +145,7 @@
                 });
             });
 
-            it('Should return geocoded address when quried with object', function(done) {
+            it('Should return geocoded address when queried with object', function(done) {
                 var mock = sinon.mock(mockedHttpAdapter);
                 mock.expects('get').once().callsArgWith(2, false, [{
                         "place_id": "7677374",
@@ -198,7 +199,8 @@
                         "streetName": "Avenue des Champs-\u00c9lys\u00e9es",
                         "streetNumber": "93",
                         "countryCode": "FR",
-                        "neighbourhood": "Williamsburg"
+                        "neighbourhood": "Williamsburg",
+                        "confidence": 0.621
                     });
 
                     done();

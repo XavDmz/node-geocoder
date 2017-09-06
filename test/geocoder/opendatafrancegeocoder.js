@@ -119,7 +119,8 @@
                         countryCode: 'FR',
                         citycode: '75119',
                         id: 'ADRNIVX_0000000270725006',
-                        type: 'housenumber'
+                        type: 'housenumber',
+                        confidence: 0.8551727272727272
                     });
 
                     results.raw.should.deep.equal({
@@ -231,7 +232,8 @@
                         countryCode: 'FR',
                         citycode: '49007',
                         id: 'ADRNIVX_0000000263522758',
-                        type: 'housenumber'
+                        type: 'housenumber',
+                        confidence: 0.8585141961673092
                     });
 
                     results.raw.should.deep.equal({
@@ -343,7 +345,8 @@
                         type: 'city',
                         population: '26.6',
                         id: '92060',
-                        adm_weight: '2'
+                        adm_weight: '2',
+                        confidence: 0.6722272727272727
                     });
 
                     mock.verify();
@@ -413,7 +416,8 @@
                         citycode: '56001',
                         countryCode: 'FR',
                         type: 'locality',
-                        id: '56001_D393_0c0627'
+                        id: '56001_D393_0c0627',
+                        confidence: 0.8246272727272728
                     });
 
                     mock.verify();
@@ -485,7 +489,8 @@
                         countryCode: 'FR',
                         type: 'village',
                         id: '60499',
-                        population: '0.2'
+                        population: '0.2',
+                        confidence: 0.4108585858585858
                     });
 
                     mock.verify();

@@ -118,7 +118,8 @@
                         "streetName": "Pilkington Avenue",
                         "streetNumber": "135",
                         "countryCode": "GB",
-                        "neighbourhood": ""
+                        "neighbourhood": "",
+                        "confidence": 0.411
                     });
 
                     done();
