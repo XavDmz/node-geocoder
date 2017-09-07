@@ -111,7 +111,7 @@
                         "streetNumber": "135",
                         "countryCode": "GB",
                         "neighbourhood": "",
-                        "confidence": 0.411
+                        "score": 0.411
                     });
 
                     results.raw.should.deep.equal([{
@@ -200,7 +200,7 @@
                         "streetNumber": "93",
                         "countryCode": "FR",
                         "neighbourhood": "Williamsburg",
-                        "confidence": 0.621
+                        "score": 0.621
                     });
 
                     done();

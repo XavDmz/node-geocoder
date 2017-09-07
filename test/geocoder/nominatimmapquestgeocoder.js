@@ -119,7 +119,7 @@
                         "streetNumber": "135",
                         "countryCode": "GB",
                         "neighbourhood": "",
-                        "confidence": 0.411
+                        "score": 0.411
                     });
 
                     done();
