@@ -75,3 +75,11 @@
 
 * fix yandex geocoder
 * virtualearth geocoder
+
+## 3.20.1
+
+* Fix yandex geocoder
+
+## 3.21.0
+
+Add suppot for osmServer option

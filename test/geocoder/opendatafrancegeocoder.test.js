@@ -10,16 +10,16 @@
         get: function() {}
     };
 
-    describe('OpendataFranceGeocoder', function() {
+    describe('OpendataFranceGeocoder', () => {
 
-        describe('#constructor' , function() {
+        describe('#constructor' , () => {
 
-            it('an http adapter must be set', function() {
+            test('an http adapter must be set', () => {
 
                 expect(function() {new OpendataFranceGeocoder();}).to.throw(Error, 'OpendataFranceGeocoder need an httpAdapter');
             });
 
-            it('Should be an instance of OpendataFranceGeocoder', function() {
+            test('Should be an instance of OpendataFranceGeocoder', () => {
 
                 var openDataFranceGeocoder = new OpendataFranceGeocoder(mockedHttpAdapter);
 
@@ -28,9 +28,9 @@
 
         });
 
-        describe('#geocode' , function() {
+        describe('#geocode' , () => {
 
-            it('Should not accept IPv4', function() {
+            test('Should not accept IPv4', () => {
 
                 var openDataFranceGeocoder = new OpendataFranceGeocoder(mockedHttpAdapter);
 
@@ -40,7 +40,7 @@
 
             });
 
-            it('Should not accept IPv6', function() {
+            test('Should not accept IPv6', () => {
 
                 var openDataFranceGeocoder = new OpendataFranceGeocoder(mockedHttpAdapter);
 
@@ -50,7 +50,7 @@
 
             });
 
-            it('Should call httpAdapter get method', function() {
+            test('Should call httpAdapter get method', () => {
 
                 var mock = sinon.mock(mockedHttpAdapter);
                 mock.expects('get').once().returns({then: function() {}});
@@ -63,7 +63,7 @@
 
             });
 
-            it('Should return geocoded address with string', function(done) {
+            test('Should return geocoded address with string', done => {
                 var mock = sinon.mock(mockedHttpAdapter);
                 mock.expects('get').once().callsArgWith(2, false, {
                   "licence": "ODbL 1.0",
@@ -162,7 +162,7 @@
                 });
             });
 
-            it('Should return geocoded address with object', function(done) {
+            test('Should return geocoded address with object', done => {
                 var mock = sinon.mock(mockedHttpAdapter);
                 mock.expects('get').once().callsArgWith(2, false, {
                   "limit": 20,
@@ -280,7 +280,7 @@
                 });
             });
 
-            it('Should return geocoded address with type city', function(done) {
+            test('Should return geocoded address with type city', done => {
                 var mock = sinon.mock(mockedHttpAdapter);
                 mock.expects('get').once().callsArgWith(2, false, {
                     "limit": 1,
@@ -354,7 +354,7 @@
                 });
             });
 
-            it('Should return geocoded address with type locality', function(done) {
+            test('Should return geocoded address with type locality', done => {
                 var mock = sinon.mock(mockedHttpAdapter);
                 mock.expects('get').once().callsArgWith(2, false, {
                     "limit": 1,
@@ -425,7 +425,7 @@
                 });
             });
 
-            it('Should return geocoded address with type village', function(done) {
+            test('Should return geocoded address with type village', done => {
                 var mock = sinon.mock(mockedHttpAdapter);
                 mock.expects('get').once().callsArgWith(2, false, {
                     "limit": 1,
@@ -500,8 +500,8 @@
 
         });
 
-        describe('#reverse' , function() {
-            it('Should return geocoded address', function(done) {
+        describe('#reverse' , () => {
+            test('Should return geocoded address', done => {
                 var mock = sinon.mock(mockedHttpAdapter);
                 mock.expects('get').once().callsArgWith(2, false, {
                     "licence": "ODbL 1.0",
