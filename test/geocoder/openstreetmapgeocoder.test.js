@@ -104,14 +104,16 @@
                         "longitude": -1.8164307339635,
                         "formattedAddress": "135, Pilkington Avenue, Castle Vale, Maney, Birmingham, West Midlands, England, B72 1LH, United Kingdom",
                         "country": "United Kingdom",
-						            "state": "England",
+						"state": "England",
                         "city": "Birmingham",
                         "zipcode": "B72 1LH",
                         "streetName": "Pilkington Avenue",
                         "streetNumber": "135",
                         "countryCode": "GB",
                         "neighbourhood": "",
-                        "score": 0.411
+                        "extra": {
+                            "score": 0.411
+                        }
                     });
 
                     results.raw.should.deep.equal([{
@@ -200,7 +202,9 @@
                         "streetNumber": "93",
                         "countryCode": "FR",
                         "neighbourhood": "Williamsburg",
-                        "score": 0.621
+                        "extra": {
+                            "score": 0.621
+                        }
                     });
 
                     done();

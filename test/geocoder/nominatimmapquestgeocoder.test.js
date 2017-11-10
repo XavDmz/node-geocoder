@@ -119,7 +119,9 @@
                         "streetNumber": "135",
                         "countryCode": "GB",
                         "neighbourhood": "",
-                        "score": 0.411
+                        "extra": {
+                            "score": 0.411
+                        }
                     });
 
                     done();
